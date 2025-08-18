@@ -5,7 +5,7 @@
 **Repository**: https://github.com/aezizhu/shortcut-mcp
 
 
-### 🔧 New Built-in Shortcuts (Developer-Focused)
+### 🔧 New Built-in Shortcuts (Developer-Focused, you can set it by yourself of course)
 
 | Command | Purpose | Use Case |
 |---------|---------|----------|
@@ -72,14 +72,6 @@ Works seamlessly across all developer tools:
 - **Technology Agnostic**: Works with any programming language or framework
 - **Best Practices Focus**: Promotes industry standards and patterns
 
-### 🔄 Migration from Previous Version
-
-If you had the previous version with `/th`, `/ider` shortcuts:
-1. Old shortcuts will be replaced with developer-focused ones
-2. You can still create custom shortcuts for any purpose
-3. Use the MCP tools to add your preferred shortcuts
-
-### 🎉 Ready for Professional Use
 
 The Prompt Shortcut MCP is now optimized for professional developers:
 - **Practical shortcuts** for real development tasks
