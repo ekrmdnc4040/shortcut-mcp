@@ -321,48 +321,48 @@ export class PromptShortcutManager {
   private initializeDefaultShortcuts(): void {
     const defaults: Partial<PromptShortcut>[] = [
       {
-        command: '/th',
-        name: 'Think Harder',
-        description: 'Enhances reasoning and analysis',
-        prompt: 'Think harder about this problem. Analyze it step by step with deep reasoning and consider multiple perspectives. {input}',
-        category: ShortcutCategory.THINKING,
-        tags: ['analysis', 'reasoning', 'deep-thinking'],
-        author: 'aezi zhu'
-      },
-      {
-        command: '/ider',
-        name: 'Science Fiction Writer',
-        description: 'Role-play as a sci-fi writer',
-        prompt: 'You are a skilled science fiction writer. Based on the following prompt, write a compelling story with rich details, character development, and imaginative world-building: {input}',
-        category: ShortcutCategory.WRITING,
-        tags: ['writing', 'fiction', 'creative', 'sci-fi'],
-        author: 'aezi zhu'
-      },
-      {
-        command: '/code',
-        name: 'Expert Programmer',
-        description: 'Generate clean, documented code',
-        prompt: 'You are an expert programmer. Write clean, well-documented, and efficient code for the following requirement. Include comments and follow best practices: {input}',
+        command: '/debug',
+        name: 'Debug Assistant',
+        description: 'Systematic debugging and troubleshooting',
+        prompt: 'You are a senior debugging expert. Analyze this code issue systematically: identify potential causes, suggest debugging strategies, and provide step-by-step troubleshooting guidance: {input}',
         category: ShortcutCategory.CODING,
-        tags: ['programming', 'code', 'development'],
+        tags: ['debugging', 'troubleshooting', 'analysis'],
         author: 'aezi zhu'
       },
       {
-        command: '/explain',
-        name: 'Simple Explainer',
-        description: 'Explain complex topics simply',
-        prompt: 'Explain the following concept in simple terms that anyone can understand. Use analogies, examples, and break it down step by step: {input}',
-        category: ShortcutCategory.EXPLAINING,
-        tags: ['explanation', 'teaching', 'simple'],
+        command: '/review',
+        name: 'Code Reviewer',
+        description: 'Comprehensive code review and feedback',
+        prompt: 'You are an experienced code reviewer. Perform a thorough code review focusing on: code quality, security, performance, maintainability, and best practices. Provide specific, actionable feedback: {input}',
+        category: ShortcutCategory.CODING,
+        tags: ['code-review', 'quality', 'security', 'best-practices'],
         author: 'aezi zhu'
       },
       {
-        command: '/pros-cons',
-        name: 'Pros and Cons Analysis',
-        description: 'Analyze advantages and disadvantages',
-        prompt: 'Analyze the following topic by listing the pros and cons. Be objective and consider multiple viewpoints: {input}',
-        category: ShortcutCategory.ANALYSIS,
-        tags: ['analysis', 'comparison', 'decision-making'],
+        command: '/arch',
+        name: 'System Architect',
+        description: 'Architecture design and system planning',
+        prompt: 'You are a senior software architect. Analyze the system design requirements and provide: architectural recommendations, technology choices, scalability considerations, and implementation strategy: {input}',
+        category: ShortcutCategory.THINKING,
+        tags: ['architecture', 'system-design', 'scalability', 'planning'],
+        author: 'aezi zhu'
+      },
+      {
+        command: '/test',
+        name: 'Test Engineer',
+        description: 'Comprehensive test case generation',
+        prompt: 'You are a testing expert. Create comprehensive test cases including: unit tests, integration tests, edge cases, and test data. Follow testing best practices and include assertions: {input}',
+        category: ShortcutCategory.CODING,
+        tags: ['testing', 'unit-tests', 'quality-assurance'],
+        author: 'aezi zhu'
+      },
+      {
+        command: '/optimize',
+        name: 'Performance Expert',
+        description: 'Performance analysis and optimization',
+        prompt: 'You are a performance optimization specialist. Analyze the code/system for: performance bottlenecks, memory usage, algorithmic efficiency, and provide specific optimization recommendations: {input}',
+        category: ShortcutCategory.CODING,
+        tags: ['performance', 'optimization', 'efficiency'],
         author: 'aezi zhu'
       }
     ];
