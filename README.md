@@ -54,6 +54,308 @@ Now just type: `/myreview` + your code
 
 **That's it. Your personal prompt library, always at your fingertips.**
 
+## 📚 Complete Customization Guide
+
+### Real Examples from Popular Prompts
+
+#### Example 1: The "Perfect Code Assistant" Prompt (400+ words)
+This is one of the most popular prompts developers use repeatedly:
+
+```javascript
+// Step 1: Define your custom shortcut
+create_shortcut({
+  command: "/assistant",
+  name: "Perfect Coding Assistant",
+  prompt: `You are an expert programmer with deep knowledge across multiple languages and frameworks. Your approach combines theoretical knowledge with practical experience from production systems.
+
+CORE PRINCIPLES:
+1. Write clean, maintainable code that follows SOLID principles
+2. Always consider edge cases and error handling
+3. Optimize for readability first, performance second (unless specified)
+4. Include comprehensive comments for complex logic
+5. Follow language-specific best practices and idioms
+
+RESPONSE FORMAT:
+- Start with a brief analysis of the problem
+- Present the solution with clear explanations
+- Include code with detailed comments
+- Discuss time/space complexity when relevant
+- Suggest alternative approaches if applicable
+- Mention potential pitfalls or considerations
+
+CODING STANDARDS:
+- Use meaningful variable and function names
+- Keep functions small and focused (single responsibility)
+- Implement proper error handling and logging
+- Add input validation where necessary
+- Consider security implications (input sanitization, SQL injection, XSS, etc.)
+- Write code that is testable and mockable
+
+DOCUMENTATION:
+- Add docstrings/JSDoc comments for all public functions
+- Include usage examples in comments
+- Document any assumptions or limitations
+- Explain complex algorithms or business logic
+
+When reviewing code, check for:
+- Logic errors and edge cases
+- Security vulnerabilities
+- Performance bottlenecks
+- Code smells and anti-patterns
+- Missing error handling
+- Opportunities for refactoring
+
+Always be constructive and educational in your responses. If you see a better way to do something, explain why it's better, not just that it is better.
+
+Task to complete: {input}`
+})
+
+// Step 2: Use it with a simple command
+// Instead of pasting all 400+ words every time, just type:
+// /assistant "implement a rate limiter in Python"
+```
+
+#### Example 2: The "Chain of Thought" Reasoning Prompt (350+ words)
+Popular for complex problem-solving:
+
+```javascript
+create_shortcut({
+  command: "/think",
+  name: "Chain of Thought Reasoning",
+  prompt: `Let's approach this step-by-step using careful reasoning.
+
+THINKING PROCESS:
+1. First, I'll break down what's being asked
+2. Then identify key components and constraints
+3. Consider multiple approaches
+4. Evaluate trade-offs
+5. Select the best solution
+6. Implement with careful consideration
+
+For each step, I will:
+- State my current understanding
+- Identify assumptions I'm making
+- Consider what could go wrong
+- Think about edge cases
+- Validate my reasoning
+
+PROBLEM ANALYSIS:
+Let me start by understanding the core problem. The request is about: {input}
+
+Key aspects to consider:
+- What is the desired outcome?
+- What constraints exist?
+- What resources are available?
+- What are the success criteria?
+
+SOLUTION EXPLORATION:
+I'll explore multiple solutions:
+
+Option 1: [Describe first approach]
+- Pros: 
+- Cons:
+- Complexity:
+- Risks:
+
+Option 2: [Describe alternative approach]
+- Pros:
+- Cons:
+- Complexity:
+- Risks:
+
+Option 3: [Describe another alternative if applicable]
+- Pros:
+- Cons:
+- Complexity:
+- Risks:
+
+DECISION RATIONALE:
+Based on the analysis, I recommend [selected approach] because:
+1. [Reason 1]
+2. [Reason 2]
+3. [Reason 3]
+
+IMPLEMENTATION PLAN:
+Step 1: [Detailed first step]
+Step 2: [Detailed second step]
+Step 3: [Continue with all steps]
+
+VALIDATION:
+To ensure this solution works:
+- Test case 1: [Description]
+- Test case 2: [Description]
+- Edge case consideration: [Description]
+
+POTENTIAL IMPROVEMENTS:
+Future enhancements could include:
+- [Improvement 1]
+- [Improvement 2]
+
+Let me now provide the complete solution...`
+})
+
+// Usage: /think "design a distributed cache system"
+```
+
+#### Example 3: The "Code Reviewer" Prompt (500+ words)
+Used by teams for consistent code reviews:
+
+```javascript
+create_shortcut({
+  command: "/review",
+  name: "Comprehensive Code Review",
+  prompt: `As a senior engineer, I'll review this code across multiple dimensions. My review will be thorough but constructive, focusing on helping you improve the code and learn best practices.
+
+REVIEW CHECKLIST:
+
+1. FUNCTIONALITY & CORRECTNESS
+- Does the code do what it's supposed to do?
+- Are all requirements met?
+- Are there any logic errors or bugs?
+- Edge cases handled properly?
+- Off-by-one errors?
+- Null/undefined handling?
+
+2. CODE QUALITY & READABILITY
+- Is the code self-documenting?
+- Are variable/function names descriptive?
+- Is the code DRY (Don't Repeat Yourself)?
+- Appropriate abstraction levels?
+- Consistent coding style?
+- Proper indentation and formatting?
+
+3. PERFORMANCE & EFFICIENCY
+- Time complexity analysis
+- Space complexity concerns
+- Database query optimization
+- Caching opportunities
+- Unnecessary loops or operations
+- Memory leaks potential
+- Resource cleanup
+
+4. SECURITY CONSIDERATIONS
+- Input validation and sanitization
+- SQL injection vulnerabilities
+- XSS attack vectors
+- Authentication/authorization issues
+- Sensitive data exposure
+- Proper encryption usage
+- Security headers
+- CORS configuration
+
+5. ERROR HANDLING & RESILIENCE
+- Proper try-catch blocks
+- Meaningful error messages
+- Graceful degradation
+- Retry logic where appropriate
+- Circuit breaker patterns
+- Timeout handling
+- Rollback mechanisms
+
+6. TESTING & TESTABILITY
+- Test coverage adequacy
+- Edge cases in tests
+- Mock usage appropriateness
+- Test isolation
+- Test naming clarity
+- Integration test scenarios
+- Performance test considerations
+
+7. ARCHITECTURE & DESIGN PATTERNS
+- SOLID principles adherence
+- Design pattern usage
+- Coupling and cohesion
+- Dependency injection
+- Interface segregation
+- Modularity
+- Scalability considerations
+
+8. DOCUMENTATION & COMMENTS
+- Function/class documentation
+- Complex logic explanation
+- API documentation
+- README updates needed
+- Inline comment quality
+- TODO/FIXME items
+- Changelog updates
+
+9. DEPENDENCIES & COMPATIBILITY
+- Unnecessary dependencies
+- Dependency versions
+- License compatibility
+- Breaking changes
+- Deprecation warnings
+- Browser compatibility
+- Backward compatibility
+
+10. MAINTAINABILITY & FUTURE-PROOFING
+- Code flexibility
+- Configuration vs hardcoding
+- Feature flags usage
+- Database migration strategy
+- API versioning
+- Monitoring/logging hooks
+- Debug capabilities
+
+REVIEW OUTPUT FORMAT:
+- Critical Issues: [Must fix before merge]
+- Major Concerns: [Should address]
+- Minor Suggestions: [Nice to have]
+- Positive Feedback: [What was done well]
+- Learning Opportunities: [Educational points]
+
+Code to review: {input}`
+})
+
+// Usage: /review [paste your code]
+```
+
+### How to Create Your Own Custom Shortcuts
+
+#### Step 1: Identify Your Repetitive Prompts
+Look for prompts you use frequently:
+- Complex debugging instructions
+- Detailed code review checklists
+- Specific formatting requirements
+- Role-playing scenarios
+- Analysis frameworks
+
+#### Step 2: Create the Shortcut
+Use the MCP tool to save your prompt:
+
+```javascript
+{
+  "name": "create_shortcut",
+  "arguments": {
+    "command": "/your-command",
+    "name": "Descriptive Name",
+    "description": "What this prompt does",
+    "prompt": "Your full prompt text here with {input} for dynamic content",
+    "category": "coding|thinking|writing|analysis",
+    "tags": ["relevant", "tags", "for", "search"]
+  }
+}
+```
+
+#### Step 3: Organize Your Shortcuts
+- Use categories: `coding`, `debugging`, `review`, `architecture`, `testing`
+- Add tags for easy discovery
+- Mark favorites for quick access
+- Track usage to optimize your library
+
+### Popular Prompts You Can Add
+
+1. **The "Explain Like I'm 5" Prompt** → `/eli5`
+2. **The "Find Security Vulnerabilities" Prompt** → `/security`
+3. **The "Convert to TypeScript" Prompt** → `/typescript`
+4. **The "Write Unit Tests" Prompt** → `/unittest`
+5. **The "Optimize for Performance" Prompt** → `/perf`
+6. **The "API Documentation" Prompt** → `/apidoc`
+7. **The "Database Schema Design" Prompt** → `/schema`
+8. **The "React Best Practices" Prompt** → `/react`
+9. **The "Python PEP8" Prompt** → `/pep8`
+10. **The "System Design Interview" Prompt** → `/sysdesign`
+
 ## 🎯 Perfect For
 
 - **Developers** with elaborate debugging or review prompts
