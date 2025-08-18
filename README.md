@@ -1,28 +1,28 @@
-<<<<<<< HEAD
+
 # Shortcut MCP
 
-A powerful Model Context Protocol (MCP) server that enables Large Language Models to use custom prompt shortcuts and commands, making AI interactions faster and more efficient through personalized shortcuts like `/th` for "think harder" or `/ider` for role-playing prompts.
+A professional Model Context Protocol (MCP) server that enables developers to create custom prompt shortcuts for enhanced coding workflows. Streamline your development process with shortcuts like `/debug` for debugging assistance, `/review` for code reviews, `/optimize` for performance analysis, and `/test` for test generation.
 
 ## 🚀 Overview
 
-Shortcut MCP transforms how you interact with LLMs by providing custom prompt shortcuts and commands. Create personalized shortcuts like `/th` for "think harder" or `/ider` for creative writing, making your AI conversations faster and more efficient.
+Shortcut MCP is built for professional developers who want to optimize their AI-assisted coding workflow. Create powerful shortcuts for common development tasks like debugging, code review, architecture design, testing, and optimization - making your development process faster and more systematic.
 
-**What makes this special?**
-- 🎯 **Custom Commands**: Create shortcuts like `/th`, `/code`, `/explain` for instant prompt templates
-- ⚡ **Instant Expansion**: Transform short commands into detailed, specialized prompts
-- 🎭 **Role Playing**: Quick role assignments like `/ider` for creative writing personas  
-- 📚 **Personal Library**: Build your own collection of reusable prompt patterns
-- 🔧 **Smart Management**: Organize, categorize, and favorite your most-used shortcuts
+**What makes this special for developers?**
+- 🎯 **Development-Focused Commands**: Create shortcuts like `/debug`, `/review`, `/refactor` for instant development assistance
+- ⚡ **Workflow Optimization**: Transform short commands into detailed, context-aware development prompts
+- 🔧 **Code-Centric Roles**: Quick assignments like `/architect` for system design, `/reviewer` for code analysis
+- 📚 **Developer Library**: Build your collection of reusable development prompt patterns
+- 🏗️ **Project Management**: Organize shortcuts by technology stack, project phase, or team standards
 
 ## ✨ Key Features
 
 ### Core Functionality
-- **⚡ Command Parsing**: Instantly recognize and expand shortcut commands like `/th`, `/ider`
-- **🎨 Prompt Templates**: Rich template system with variable substitution
-- **📝 Custom Creation**: Create your own shortcuts for any use case
-- **🗂️ Smart Organization**: Categorize shortcuts by thinking, writing, coding, etc.
-- **⭐ Favorites System**: Mark frequently used shortcuts for quick access
-- **🔍 Intelligent Search**: Find shortcuts by command, name, or description
+- **⚡ Command Parsing**: Instantly recognize and expand development shortcuts like `/debug`, `/review`, `/test`
+- **🎨 Prompt Templates**: Rich template system with code context and variable substitution
+- **📝 Custom Creation**: Create shortcuts for your specific tech stack, frameworks, and coding patterns
+- **🗂️ Smart Organization**: Categorize shortcuts by language, framework, development phase, or team role
+- **⭐ Favorites System**: Mark your most-used development shortcuts for instant access
+- **🔍 Intelligent Search**: Find shortcuts by technology, task type, or development context
 
 ### Advanced Capabilities
 - **💾 Persistent Storage**: Your shortcuts are saved locally and sync across sessions
