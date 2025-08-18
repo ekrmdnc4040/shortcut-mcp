@@ -1,28 +1,76 @@
 
-# Shortcut MCP
+# Shortcut MCP - Save Your Long Prompts as Simple Commands
 
-A professional Model Context Protocol (MCP) server that enables developers to create custom prompt shortcuts for enhanced coding workflows. Streamline your development process with shortcuts like `/debug` for debugging assistance, `/review` for code reviews, `/optimize` for performance analysis, and `/test` for test generation.
+**Stop copying and pasting the same 500-word prompts every day.**
 
-## 🚀 Overview
+Shortcut MCP lets you save YOUR frequently used long prompts as custom shortcuts. That complex prompt you use for code reviews? Save it as `/review`. Your detailed debugging instructions prompt? Now it's just `/debug`. The elaborate persona you crafted? Simply `/expert`.
 
-Shortcut MCP is built for professional developers who want to optimize their AI-assisted coding workflow. Create powerful shortcuts for common development tasks like debugging, code review, architecture design, testing, and optimization - making your development process faster and more systematic.
+**Built for developers who value their time and hate repetition.**
 
-**What makes this special for developers?**
-- 🎯 **Development-Focused Commands**: Create shortcuts like `/debug`, `/review`, `/refactor` for instant development assistance
-- ⚡ **Workflow Optimization**: Transform short commands into detailed, context-aware development prompts
-- 🔧 **Code-Centric Roles**: Quick assignments like `/architect` for system design, `/reviewer` for code analysis
-- 📚 **Developer Library**: Build your collection of reusable development prompt patterns
-- 🏗️ **Project Management**: Organize shortcuts by technology stack, project phase, or team standards
+## 🚀 Real Examples - See the Difference
+
+### Before (What you used to type):
+```
+"You are a senior software engineer with 15+ years of experience in building 
+production systems. Perform a thorough code review of the following code. 
+Your review should cover: 1. Code Quality: Assess readability, maintainability, 
+and adherence to best practices and design patterns. 2. Potential Bugs: 
+Identify any logic errors, edge cases not handled, or potential runtime 
+exceptions. 3. Security: Check for security vulnerabilities including 
+injection attacks, data exposure, authentication/authorization issues. 
+4. Performance: Analyze algorithmic complexity, database queries, caching 
+opportunities, and potential bottlenecks. 5. Testing: Evaluate test coverage 
+and suggest additional test cases. 6. Documentation: Assess inline comments, 
+function documentation, and clarity. 7. Architecture: Comment on the overall 
+design, separation of concerns, and scalability. Provide specific line-by-line 
+feedback where appropriate, and conclude with a summary of the most critical 
+issues to address. Be constructive but thorough - this code will go to 
+production. Code to review: [YOUR CODE HERE]"
+```
+
+### After (What you type now):
+```
+/coderev [YOUR CODE HERE]
+```
+
+**That's it. From 300+ words to just 8 characters.**
+
+## 💡 How It Works
+
+### 1. You Have a Long Prompt You Use Often
+Maybe it's a 300-word code review checklist, a 500-word debugging guide, or a complex persona description you've perfected over months.
+
+### 2. Save It as a Shortcut
+```json
+{
+  "command": "/myreview",
+  "prompt": "[Your 300-word code review prompt here]"
+}
+```
+
+### 3. Use It Instantly
+Instead of: *[Paste 300 words]* + your code  
+Now just type: `/myreview` + your code
+
+**That's it. Your personal prompt library, always at your fingertips.**
+
+## 🎯 Perfect For
+
+- **Developers** with elaborate debugging or review prompts
+- **Architects** using detailed system design templates  
+- **Team Leads** with standardized code review checklists
+- **Engineers** who've crafted the perfect prompts through trial and error
+- **Anyone** tired of managing prompts in separate documents
 
 ## ✨ Key Features
 
 ### Core Functionality
-- **⚡ Command Parsing**: Instantly recognize and expand development shortcuts like `/debug`, `/review`, `/test`
-- **🎨 Prompt Templates**: Rich template system with code context and variable substitution
-- **📝 Custom Creation**: Create shortcuts for your specific tech stack, frameworks, and coding patterns
-- **🗂️ Smart Organization**: Categorize shortcuts by language, framework, development phase, or team role
-- **⭐ Favorites System**: Mark your most-used development shortcuts for instant access
-- **🔍 Intelligent Search**: Find shortcuts by technology, task type, or development context
+- **⚡ Long Prompt Replacement**: Replace 500+ word prompts with simple `/commands`
+- **🎨 Complex Templates**: Store multi-paragraph instructions, personas, and chain-of-thought reasoning
+- **📝 Custom Creation**: Save your carefully crafted prompts and reuse them instantly
+- **🗂️ Smart Organization**: Categorize by use case, project, or workflow
+- **⭐ Favorites System**: Quick access to your most powerful prompts
+- **🔍 Intelligent Search**: Find the right prompt by keyword or description
 
 ### Advanced Capabilities
 - **💾 Persistent Storage**: Your shortcuts are saved locally and sync across sessions
@@ -197,6 +245,61 @@ const client = new MCPClient({
 const result = await client.callTool('parse_shortcut', {
   input: '/th How does AI reasoning work?'
 });
+```
+
+## 📝 Create Your Own Shortcuts
+
+### Example: Save Your Code Review Prompt
+```javascript
+// Your current workflow:
+// 1. Open your prompts document
+// 2. Find your code review prompt (300+ words)
+// 3. Copy it
+// 4. Paste into AI chat
+// 5. Add your code
+
+// With Shortcut MCP:
+create_shortcut({
+  command: "/myreview",
+  name: "My Team's Code Review",
+  prompt: `You are reviewing code for our team's production system.
+  
+  Check for:
+  - Our style guide compliance (4 spaces, no tabs)
+  - Security issues specific to our stack (Node.js, PostgreSQL)
+  - Performance implications for our 100k daily users
+  - Missing error handling for our payment system
+  - Compliance with our logging standards
+  - Unit test coverage (minimum 80%)
+  - Documentation in our format
+  
+  [... your full 300+ word prompt ...]
+  
+  Code to review: {input}`
+})
+
+// Now just type: /myreview [code]
+```
+
+### Example: Save Your Debugging Template
+```javascript
+create_shortcut({
+  command: "/debug-prod",
+  name: "Production Debugging Guide",
+  prompt: `[Your 500+ word debugging methodology that includes:
+  - System architecture context
+  - Common failure points
+  - Log analysis steps
+  - Database query patterns
+  - Performance profiling steps
+  - Rollback procedures
+  - Incident documentation
+  ...]
+  
+  Issue to debug: {input}`
+})
+
+// Usage: /debug-prod "Users can't login after deployment"
 ```
 
 ## 🚀 Usage
