@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shortcut MCP
 
 A powerful Model Context Protocol (MCP) server that enables Large Language Models to use custom prompt shortcuts and commands, making AI interactions faster and more efficient through personalized shortcuts like `/th` for "think harder" or `/ider` for role-playing prompts.
@@ -434,3 +435,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - [ ] Role-based access controls
 - [ ] Analytics and usage reporting
 - [ ] Centralized configuration management
+=======
+# shortcut-mcp
+Universal MCP server for custom prompt shortcuts. Transform /th into 'think harder' prompts across Claude Desktop, Cursor, Cline, Continue.dev and any MCP-compatible platform.
+>>>>>>> c402362fc942e18cae89ab3edfcceaa01ec327c3
