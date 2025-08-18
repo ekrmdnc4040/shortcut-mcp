@@ -1,0 +1,49 @@
+{
+  "server": {
+    "name": "shortcut-mcp",
+    "version": "1.0.0",
+    "description": "macOS Shortcuts MCP Server"
+  },
+  "shortcuts": {
+    "allowedPrefixes": [
+      "Public",
+      "Safe",
+      "Demo"
+    ],
+    "blockedShortcuts": [
+      "System Configuration",
+      "Admin Tools",
+      "Security Settings"
+    ],
+    "maxExecutionTime": 30000,
+    "defaultTimeout": 10000,
+    "cacheTimeout": 300000,
+    "enableCache": true
+  },
+  "security": {
+    "requireConfirmation": false,
+    "logExecutions": true,
+    "allowSystemShortcuts": false,
+    "sandboxMode": false,
+    "maxInputSize": 1048576,
+    "enableRateLimit": true,
+    "rateLimit": {
+      "windowMs": 60000,
+      "maxRequests": 100
+    }
+  },
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": null,
+    "format": "json",
+    "enableDebug": false
+  },
+  "performance": {
+    "enableCaching": true,
+    "cacheSize": 1000,
+    "cacheTTL": 300,
+    "maxConcurrentExecutions": 5,
+    "enableMetrics": true
+  }
+}

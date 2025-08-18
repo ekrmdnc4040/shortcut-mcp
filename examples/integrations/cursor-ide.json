@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "prompt-shortcuts": {
+      "command": "node",
+      "args": [
+        "/path/to/shortcut-mcp/dist/index.js"
+      ],
+      "env": {
+        "LOG_LEVEL": "info"
+      }
+    }
+  },
+  "shortcuts": {
+    "enableAutoExpansion": true,
+    "triggerPatterns": ["/th", "/ider", "/code", "/explain", "/pros-cons"]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "models": [
+    {
+      "title": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20241022",
+      "apiKey": "[YOUR_API_KEY]"
+    }
+  ],
+  "mcpServers": {
+    "prompt-shortcuts": {
+      "command": "node",
+      "args": [
+        "/path/to/shortcut-mcp/dist/index.js"
+      ],
+      "env": {
+        "LOG_LEVEL": "info"
+      }
+    }
+  },
+  "customCommands": [
+    {
+      "name": "Use Shortcut",
+      "prompt": "Parse this input for shortcuts and expand them: {{{ input }}}"
+    }
+  ]
+}

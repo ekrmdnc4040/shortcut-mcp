@@ -1,0 +1,24 @@
+{
+  "$schema": "../src/types/config.schema.json",
+  "server": {
+    "name": "my-shortcut-mcp",
+    "version": "1.0.0"
+  },
+  "shortcuts": {
+    "allowedPrefixes": ["Work", "Personal", "Automation"],
+    "blockedShortcuts": ["Sensitive Data Handler"],
+    "maxExecutionTime": 45000,
+    "enableCache": true
+  },
+  "security": {
+    "requireConfirmation": true,
+    "logExecutions": true,
+    "allowSystemShortcuts": false,
+    "sandboxMode": true
+  },
+  "logging": {
+    "level": "debug",
+    "console": true,
+    "file": "./logs/shortcut-mcp.log"
+  }
+}
